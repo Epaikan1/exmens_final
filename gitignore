@@ -1,0 +1,29 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pkl
+*.ipynb_checkpoints/
+
+# === Environnement virtuel ===
+.env
+.venv/
+venv/
+
+# === Data / modèles ===
+*.csv
+*.xlsx
+*.sav
+*.joblib
+*.h5
+model.pkl
+
+# === Images ===
+*.png
+*.jpg
+
+# === Systèmes ===
+.DS_Store
+Thumbs.db
+
+# === Streamlit secrets ===
+.streamlit/secrets.toml
