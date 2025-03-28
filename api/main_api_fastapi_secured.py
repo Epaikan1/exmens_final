@@ -17,8 +17,7 @@ clf = pipeline_model.named_steps['clf']
 model_features = scaler.get_feature_names_out()
 
 # Clé d'API sécurisée
-API_KEY = os.getenv("API_KEY")
-
+API_KEY = os.getenv("API_KEY", "default-key-if-missing")
 # FastAPI app
 app = FastAPI(title="API IA Crédit Néo-Banque", version="1.1")
 
