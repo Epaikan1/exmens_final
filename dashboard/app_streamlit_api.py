@@ -32,15 +32,33 @@ with st.container():
 # === Blocs pédagogiques et fichiers exemples ===
 st.info("ℹ️ Pour des résultats fiables, utilisez un fichier complet avec toutes les colonnes d'entraînement. Un fichier simplifié donne un score moins précis.")
 
+# Colonne des boutons
 col_btn1, col_btn2, col_btn3, col_btn4 = st.columns(4)
+
+# 📌 Bouton avec lien Google Drive au lieu d'open()
 with col_btn1:
-    st.download_button("⬇️ Faible risque (complet)", open("client_risk_min_complet.csv", "rb"), file_name="client_risk_min_complet.csv")
+    st.markdown(
+        '[⬇️ Faible risque (complet)](https://drive.google.com/uc?export=download&id=1UIRNE8n7UmHHgRA2sHsg0PRIaYtzxPDb)',
+        unsafe_allow_html=True
+    )
+
 with col_btn2:
-    st.download_button("⬇️ Risque élevé (complet)", open("./client_risk_max_complet.csv", "rb"), file_name="client_risk_max_complet.csv")
+    st.markdown(
+        '[⬇️ Risque élevé (complet)](https://drive.google.com/uc?export=download&id=1odOsjM3UgdVUipk29f1c0wPfhL18lmd4)',
+        unsafe_allow_html=True
+    )
+
 with col_btn3:
-    st.download_button("⬇️ Client simplifié", open("./dashboard/client_risk_moyen_simplifie.csv", "rb"), file_name="client_risk_moyen_simplifie.csv")
+    st.markdown(
+        '[⬇️ Client simplifié](https://drive.google.com/uc?export=download&id=1AqxGqicVBhfik6VPEwqlw-NQj2mg8VLe)',
+        unsafe_allow_html=True
+    )
+
 with col_btn4:
-    st.download_button("⬇️ Multi-clients", open("./dashboard/multi_clients_sample.csv", "rb"), file_name="multi_clients_sample.csv")
+    st.markdown(
+        '[⬇️ Multi-clients](https://drive.google.com/uc?export=download&id=1GsCsM9WIFfDWqRch_3yq8pjtaj335v-P)',
+        unsafe_allow_html=True
+    )
 
 # === Upload d'un fichier CSV ===
 with st.expander("📁 Uploader un fichier CSV client (1 ou plusieurs lignes)"):
@@ -101,9 +119,9 @@ with st.expander("📊 Analyse Globale du Modèle (SHAP) - Cliquez pour voir"):
     st.markdown("💡 **Astuce :** ces analyses SHAP sont générées sur l'ensemble du jeu de données.")
     col1, col2 = st.columns(2)
     with col1:
-        st.image("./shap_Figure_1.png", caption="Distribution des effets SHAP", use_column_width=True)
+        st.image("https://i.postimg.cc/wR6r4Pys/shap-Figure-1.png", caption="Distribution des effets SHAP", use_column_width=True)
     with col2:
-        st.image("./shap_Figure_2.png", caption="Importance moyenne des variables", use_column_width=True)
+        st.image("https://i.postimg.cc/nMZNLsRc/shap-Figure-2.png", caption="Importance moyenne des variables", use_column_width=True)
 
 st.markdown("---")
-st.caption("Projet ISCODE | Bloc 2 IA — API, Dashboard, UX, Sécurité et Interprétabilité")
+st.caption("Projet ISCODE | Bloc 4 IA — API, Dashboard, UX, Sécurité et Interprétabilité")
