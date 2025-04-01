@@ -34,13 +34,13 @@ st.info("ℹ️ Pour des résultats fiables, utilisez un fichier complet avec to
 
 col_btn1, col_btn2, col_btn3, col_btn4 = st.columns(4)
 with col_btn1:
-    st.download_button("⬇️ Faible risque (complet)", open("/workspaces/exmens_final/dashboard/client_risk_min_complet.csv", "rb"), file_name="client_risk_min_complet.csv")
+    st.download_button("⬇️ Faible risque (complet)", open("client_risk_min_complet.csv", "rb"), file_name="client_risk_min_complet.csv")
 with col_btn2:
-    st.download_button("⬇️ Risque élevé (complet)", open("/workspaces/exmens_final/dashboard/client_risk_max_complet.csv", "rb"), file_name="client_risk_max_complet.csv")
+    st.download_button("⬇️ Risque élevé (complet)", open("./client_risk_max_complet.csv", "rb"), file_name="client_risk_max_complet.csv")
 with col_btn3:
-    st.download_button("⬇️ Client simplifié", open("/workspaces/exmens_final/dashboard/client_risk_moyen_simplifie.csv", "rb"), file_name="client_risk_moyen_simplifie.csv")
+    st.download_button("⬇️ Client simplifié", open("./dashboard/client_risk_moyen_simplifie.csv", "rb"), file_name="client_risk_moyen_simplifie.csv")
 with col_btn4:
-    st.download_button("⬇️ Multi-clients", open("/workspaces/exmens_final/dashboard/multi_clients_sample.csv", "rb"), file_name="multi_clients_sample.csv")
+    st.download_button("⬇️ Multi-clients", open("./dashboard/multi_clients_sample.csv", "rb"), file_name="multi_clients_sample.csv")
 
 # === Upload d'un fichier CSV ===
 with st.expander("📁 Uploader un fichier CSV client (1 ou plusieurs lignes)"):
@@ -101,9 +101,9 @@ with st.expander("📊 Analyse Globale du Modèle (SHAP) - Cliquez pour voir"):
     st.markdown("💡 **Astuce :** ces analyses SHAP sont générées sur l'ensemble du jeu de données.")
     col1, col2 = st.columns(2)
     with col1:
-        st.image("/workspaces/exmens_final/dashboard/shap_Figure_1.png", caption="Distribution des effets SHAP", use_column_width=True)
+        st.image("./shap_Figure_1.png", caption="Distribution des effets SHAP", use_column_width=True)
     with col2:
-        st.image("/workspaces/exmens_final/dashboard/shap_Figure_2.png", caption="Importance moyenne des variables", use_column_width=True)
+        st.image("./shap_Figure_2.png", caption="Importance moyenne des variables", use_column_width=True)
 
 st.markdown("---")
 st.caption("Projet ISCODE | Bloc 2 IA — API, Dashboard, UX, Sécurité et Interprétabilité")
