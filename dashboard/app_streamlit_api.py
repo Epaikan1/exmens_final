@@ -8,8 +8,9 @@ from PIL import Image
 import json
 
 # === Configuration de l'API ===
-API_URL = "http://127.0.0.1:8000"
+API_URL = "https://exmens-final.onrender.com"
 API_KEY = "123secure-key"
+
 HEADERS = {
     "Content-Type": "application/json",
     "Authorization": f"Bearer {API_KEY}"
